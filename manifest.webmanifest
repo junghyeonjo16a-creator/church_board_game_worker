@@ -1,6 +1,6 @@
 {
-  "name": "청지기 브루마블 - 직장인용",
-  "short_name": "청지기 직장인용",
+  "name": "내 삶의 주인을 찾아서! 영육마블!",
+  "short_name": "영육마블",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#faf8f0",
