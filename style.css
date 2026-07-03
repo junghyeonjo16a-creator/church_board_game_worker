@@ -23,4 +23,75 @@ button { font: inherit; } .btn-primary { background: var(--primary); color: whit
 .rules-box { background: #f8f6f0; border: 2px solid var(--border); border-radius: var(--radius-sm); padding: 16px; margin-bottom: 12px; }
 .rules-box p { margin: 0 0 10px; line-height: 1.65; }
 .rules-box p:last-child { margin-bottom: 0; }
-.finish-message { text-align: center; color: var(--text-light); margin-bottom: 12px; font-weight: 700; }
+.finish-message { text-align: center; color: #e63946; margin-bottom: 12px; font-weight: 800; }
+
+/* Mobile completion buttons should stay as a single centered action. */
+.event-done-btn,
+#rules-done-btn,
+#event-done-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100%;
+  min-height: 52px;
+  text-align: center !important;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  gap: 0;
+}
+
+.event-done-btn .choice-score,
+#rules-done-btn .choice-score,
+#event-done-btn .choice-score {
+  display: none !important;
+}
+
+@media (max-width: 420px) {
+  .event-done-btn,
+  #rules-done-btn,
+  #event-done-btn {
+    display: flex !important;
+    grid-template-columns: none !important;
+    font-size: .98rem;
+    line-height: 1.35;
+    padding: 14px 18px;
+  }
+}
+
+/* Standalone modal action buttons, separate from choice buttons. */
+.done-action-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100%;
+  min-height: 54px;
+  padding: 14px 18px;
+  margin-top: 16px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: #f8f6f0;
+  color: var(--text);
+  font-size: .95rem;
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: center !important;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  cursor: pointer;
+}
+
+.done-action-btn:hover {
+  border-color: var(--primary-light);
+  background: #f0f7f0;
+}
+
+@media (max-width: 420px) {
+  .done-action-btn {
+    display: flex !important;
+    grid-template-columns: none !important;
+    font-size: 1rem;
+    min-height: 56px;
+  }
+}
